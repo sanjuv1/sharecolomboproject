@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Enter Voter Details">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Add Candidate</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Add-Candidate.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.19.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
+    <link rel="stylesheet" href="{% static '/css/nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static '/css/Add-Patient.css' %}" media="screen">
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "#"
+}</script>
+<style>
+  .button1 {
+position: relative;
+background-color: #659b00;
+border: none;
+font-size: 20px;
+color: #FFFFFF;
+padding: 10px;
+width: 150px;
+text-align: center;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+text-decoration: none;
+overflow: hidden;
+cursor: pointer;
+}
+
+.button1:after {
+content: "";
+background: #90EE90;
+display: block;
+position: absolute;
+padding-top: 300%;
+padding-left: 350%;
+margin-left: -20px!important;
+margin-top: -120%;
+opacity: 0;
+transition: all 0.8s
+}
+
+.button1:active:after {
+padding: 0;
+margin: 0;
+opacity: 1;
+transition: 0s
+}
+  </style>
+    <meta name="theme-color" content="#4a5e8b">
+    <meta property="og:title" content="Add Candidate">
+    <meta property="og:type" content="website">
+  </head>
+  <!-- <body class="u-body u-overlap"> -->
+    <section class="u-align-left u-clearfix u-section-1" id="carousel_d587">
+      <div class="u-expanded-height-lg u-expanded-height-md u-expanded-height-xl u-expanded-width-sm u-expanded-width-xs u-palette-3-base u-shape u-shape-rectangle u-shape-1"></div>
+      <h2 class="u-text u-text-1">Add Patient Details</h2>
+      <div class="u-clearfix u-custom-color-1 u-gutter-0 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-33 u-white u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-1">
+                <div class="u-form u-form-1">
+                  <form action="{% url 'addpatientdetails' %}" method="POST" class="u-block-1b5f-15 u-form-spacing-31 u-form-vertical u-inner-form" source="custom" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="u-form-group u-form-group-1">
+                      <label for="text-dfdd" class="u-form-control-hidden u-label"></label>
+                      <input type="text" placeholder="Name" id="text-dfdd" name="name" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input">
+                    </div>
+                    <div class="u-form-group u-form-name">
+                      <label for="name-10f5" class="u-form-control-hidden u-label">Name</label>
+                      <input type="date" placeholder="Birthdate" id="name-10f5" name="bdate" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input" required="">
+                    </div>
+                    <div class="u-form-email u-form-group">
+                      <label for="email-10f5" class="u-form-control-hidden u-label">Contact No</label>
+                      <input type="text" placeholder="Contactno" id="email-10f5" name="contactno" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input" required="">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
+                    <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
+                    <div class="u-form-group u-form-group-4">
+                      <label for="text-23d6" class="u-form-control-hidden u-label"></label>
+                      <input type="file" placeholder="Image" id="text-23d6" name="image" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input">
+                    </div>
+                    <div class="u-form-group u-form-group-5">
+                      <textarea placeholder="Prescription" rows="4" cols="50" id="message-f2a8" name="prescription" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle" required=""></textarea>
+                    </div>
+                    <div class="u-form-group u-form-group-6">
+                      <label for="text-c5e2" class="u-form-control-hidden u-label"></label>
+                      <input type="date" placeholder="date" id="text-c5e2" name="date" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input">
+                    </div>
+                    <div class="u-form-group u-form-group-6">
+                      <label for="text-c5e2" class="u-form-control-hidden u-label"></label>
+                      <input type="number" placeholder="bill" id="text-c5e2" name="bill" class="u-border-2 u-border-grey-75 u-border-no-left u-border-no-right u-border-no-top u-input">
+                    </div>
+                    <div class="u-align-right u-form-group u-form-submit">
+                      <!-- <a href="#" class="u-border-2 u-border-black u-btn u-btn-rectangle u-btn-submit u-button-style u-none u-text-body-color u-btn-1">Submit</a> -->
+                      <input type="submit" value="submit"  class="button1">
+                    </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-layout-cell u-size-27 u-layout-cell-2">
+              <div class="u-container-layout u-container-layout-2">
+                <img class="u-expanded-width u-image u-image-1" src= "{% static 'images/clinic.png' %}" data-image-width="800" data-image-height="785">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    </section>
+  </body>
+</html>
